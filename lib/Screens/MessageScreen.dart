@@ -40,21 +40,32 @@ class _MessageScreenState extends State<MessageScreen> {
 
 
         body: Column(
-          children: [
-            // type your code here
-
-
-
-
-
-
           
-    
-    
+          children: [
+            Expanded(
+                child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Card(      
+                      margin: EdgeInsets.only(left: 8,right: 8,bottom: 5),
+                      color: Colors.blueGrey,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                      child:
+                      TextFormField(
+                      decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Type a message",
+                      contentPadding:EdgeInsets.all(15),
+                      ),
+                      ),
+                      ),
+                      ),
+                      ),
+          
 
 
 
 
+            // type your code here
 
 
 
