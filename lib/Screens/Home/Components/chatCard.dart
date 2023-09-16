@@ -16,10 +16,11 @@ class ChatCard extends StatelessWidget {
         width: double.infinity,
         margin: EdgeInsets.all(10),
         color: Colors.red,
-        height: 10,
         child: Column(
           children: [
             //  use your code here to make chat card
+            Text(data["user_id"]),
+            Text(data["last_message"])
           ],
         ),
       ),
