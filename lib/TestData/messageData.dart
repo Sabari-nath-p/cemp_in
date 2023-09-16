@@ -1,3 +1,5 @@
+import 'package:cemp/styles.dart';
+
 List ChatList = [
   {
     "profile_image": "https://avatarfiles.alphacoders.com/194/194742.jpg",
@@ -13,6 +15,9 @@ List ChatList = [
     "sent_time": "",
     "unread": 1
   },
+
+
+  
   {
     "profile_image": "https://avatarfiles.alphacoders.com/194/194742.jpg",
     "user_id": "Sai",
