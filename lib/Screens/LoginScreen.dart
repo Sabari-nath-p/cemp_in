@@ -15,6 +15,11 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Scaffold(
       body: Column(
         children: [
+          Container(width: MediaQuery.of(context).size.width,
+          height: 150,
+          alignment: Alignment.bottomCenter,
+          color: Colors.amber,
+          ),
           InkWell(
               onTap: () {
                 Navigator.of(context)
