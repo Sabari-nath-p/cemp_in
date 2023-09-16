@@ -1,3 +1,4 @@
+import 'package:cemp/styles.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatefulWidget {
@@ -12,7 +13,8 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-
+        tx400("Hello",
+            size: 10, color: Colors.black, textAlign: TextAlign.center)
         // type you home page code
       ],
     );
