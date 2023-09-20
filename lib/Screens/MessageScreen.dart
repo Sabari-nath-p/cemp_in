@@ -4,7 +4,8 @@ import 'package:cemp/styles.dart';
 import 'package:flutter/material.dart';
 
 class MessageScreen extends StatefulWidget {
-  const MessageScreen({super.key});
+  final String username;
+  const MessageScreen({super.key,required this.username});
 
   @override
   State<MessageScreen> createState() => _MessageScreenState();
@@ -15,62 +16,43 @@ class _MessageScreenState extends State<MessageScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar:AppBar(
-         titleSpacing:5,
-          title:Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children:[
-              tx700("Sabari Momo",size:20),
-              tx400("online",size: 15)
-              ],
-            ),
-           leadingWidth:100,
-           leading:Row(
-           mainAxisAlignment:MainAxisAlignment.spaceEvenly,
-           children: [
-            Icon(Icons.arrow_back_ios,size: 20),
-            CircleAvatar(
-              radius: 22,  
-                     
-            )
-          ],
-        ),
-      ),
+                      appBar:AppBar(
+                      titleSpacing:5,
+                      title:Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children:[
+                        tx700(widget.username),
+                        tx400("online")
+                      ],
+                      ),
+                      leadingWidth:100,
+                      leading:Row(
+                      mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                      children: [
+                      IconButton(onPressed:()=>Navigator.pop(context), icon:Icon(Icons.arrow_back_ios_new),),
+                      CircleAvatar(
+                      radius: 22,
+                      )
+                      ],
+                      ),
+                      ),
 
-
-
-        body: Column(
-          
-          children: [
-            Expanded(
-                child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Card(      
-                      margin: EdgeInsets.only(left: 8,right: 8,bottom: 5),
-                      color: Colors.blueGrey,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                      child:
-                      TextFormField(
-                      decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: "Type a message",
-                      contentPadding:EdgeInsets.all(15),
-                      ),
-                      ),
-                      ),
-                      ),
-                      ),
           
 
-
-
-
+            body: Column(
+                children: [
             // type your code here
-
-
-
-
+            
+                
+          
             //---------------------------- code to generate message list
+
+
+
+
+
+
+
             for (var data in mlist)
               (data["is_from"])
                   ? FromMessageCard(

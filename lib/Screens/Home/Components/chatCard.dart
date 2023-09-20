@@ -10,7 +10,7 @@ class ChatCard extends StatelessWidget {
     return InkWell(
       onTap: () {
         Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => MessageScreen()));
+            .push(MaterialPageRoute(builder: (context) => MessageScreen(username: data["user_id"])));
       },
       child: Container(
         width: double.infinity,
